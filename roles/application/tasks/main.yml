@@ -1,0 +1,6 @@
+- name: git clone https://github.com/kawa557/tutorial
+  git:
+    repo: https://github.com/kawa557/tutorial
+    dest: /home/ec2-user/tutorial/
+  tags:
+    - application

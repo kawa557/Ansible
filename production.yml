@@ -1,0 +1,10 @@
+- hosts: all
+  roles:
+    - git
+    - nginx
+    - ruby
+    - mysql
+    - rails
+    - application
+  vars_files:
+    - vars/common.yml
