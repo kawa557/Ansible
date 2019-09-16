@@ -1,0 +1,17 @@
+- name: bundle install
+  shell: bundle install
+  args:
+    chdir: /home/ec2-user/tutorial
+
+- name: rake db:migrate
+  shell: bundle exec rails db:migrate
+  args:
+    chdir: /home/ec2-user/tutorial
+
+- name: unicorn start
+  shell: bundle exec rake unicorn:start
+  args:
+    chdir: /home/ec2-user/tutorial
+  tags:
+    - unicorn
+    - bundler
