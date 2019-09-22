@@ -59,7 +59,7 @@
     - ruby
     - ruby:install
     - install
- 
+
 - name: rbenv global {{ ruby_version }}
   command: rbenv global  {{ ruby_version }}
   when: ruby_installed.stdout != ruby_version
