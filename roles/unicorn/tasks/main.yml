@@ -2,14 +2,14 @@
 - name: Put unicorn.rb
   template:
     src: roles/unicorn/templates/unicorn.rb.j2
-    dest: /home/ec2-user/tutorial/config
+    dest: /home/ec2-user/tutorial/config/unicorn.rb
   tags:
     - unicorn
 
 - name: Put unicorn.rake
   template:
     src: roles/unicorn/templates/unicorn.rake.j2
-    dest: /home/ec2-user/tutorial/lib/tasks
+    dest: /home/ec2-user/tutorial/lib/tasks/unicorn.rake
   tags:
     - unicorn
 
